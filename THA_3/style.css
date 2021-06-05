@@ -1,0 +1,30 @@
+body{
+    margin: 40px;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif ;
+    border: 1px solid grey;
+}
+.heading {
+    position: absolute;
+    top: -5px;
+    left: 700px;
+    background-color: white;
+    padding: 0 20px;
+}
+ .FULL {
+     display: flex;
+
+}
+.left{
+    margin: 150px 90px;
+    width:50% ;
+}
+.right{
+    margin: 150px 90px;
+    width:50% ;
+}
+.seperator{
+    width: 1%;
+    height: 50rem;
+    background-color: hotpink;
+}
