@@ -1,0 +1,117 @@
+.full{
+    /* display: flex; */
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    border: double 5px;
+    box-shadow: 5px 6px 6px rgba(0, 0, 0, 80);
+    align-content: center;
+    padding: 30px;
+    
+    height: auto;
+    width: 400px;
+    
+    
+    
+
+      
+}
+.digits{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    padding: 10px 40px;
+    margin-left: 50px;
+      
+    
+}
+.operations{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding-top: 20px;
+    grid-gap: 10px;
+    margin-left: 60px;
+    
+}
+.func{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px 50px;
+    margin-left: 50px;
+
+}
+button:active {
+    
+    border-color: aqua;
+    border-radius: 25%;
+    
+    
+}
+button p:hover{
+   
+    color: royalblue;
+    border-radius: 25%;
+    cursor: pointer;
+}
+.digits button {
+    border: 1px transparent;
+    background-color: transparent;
+    box-shadow: 5px 6px 6px rgba(0, 0, 0, 80);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    font-weight: bolder;
+    
+}
+.operations button{
+    border: 1px transparent;
+    background-color: transparent;
+    box-shadow: 5px 6px 6px rgba(0, 0, 0, 80);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.func button{
+    border: 1px transparent;
+    background-color: transparent;
+    box-shadow: 5px 6px 6px rgba(0, 0, 0, 80);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+.digits p
+{
+    
+    color: white;
+    font-size: 15px;
+    box-shadow: 0px auto 6px rgba(0, 0, 0, );
+    
+}
+button{
+    box-shadow: salmon 20px;
+}
+.bg{
+    height: 100%;
+    background-image: url(background.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    background-size: cover;
+    
+}
+input{
+    border-radius: 20px;
+    background-color: transparent;
+    
+}
+.func button:hover{
+    color: royalblue;
+    font-weight: bolder;
+
+} 
