@@ -1,0 +1,28 @@
+.bg{
+    
+    background-color: red;
+    height: 400px;
+    width: 400px;
+    display: grid;
+    grid-template-rows: repeat(20,1fr);
+    grid-template-columns: repeat(20,1fr);
+
+    
+}
+.box{
+    border: solid rosybrown 1px;
+   
+}
+.active{
+    background-color:chartreuse;
+}
+body
+{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.pic{
+    background-color: white;
+}
