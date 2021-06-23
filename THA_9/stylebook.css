@@ -1,0 +1,42 @@
+.seats{
+    display: grid;
+    height: 400px;
+    width: 400px;
+    
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-row-gap: 25px;
+    grid-column-gap: 20px;
+    
+    padding: 20px;
+    
+    
+}
+.book{
+    border-radius: 64px 0px 0px 3px;
+    -webkit-border-radius: 6px 0px 0px 3px;
+    -moz-border-radius: 64px 0px 0px 3px;
+    border: 5px solid #ff0000;
+    
+
+
+}
+.book:hover{
+    background-color: cornsilk;
+}
+body{
+    
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,75,1) 49%, rgba(0,212,255,1) 100%);
+}
+.stats{
+    text-shadow: 4px 4px 2px rgba(255, 255, 255, 0.315);
+    color: brown;
+    font-size: large;
+}
+.active{
+      border-radius: 0px 10px 100px 101px;
+      -webkit-border-radius: 0px 10px 100px 101px;
+      -moz-border-radius: 0px 10px 100px 101px;
+      background-color: chartreuse;
+}
