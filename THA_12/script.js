@@ -1,40 +1,58 @@
-let todos = document.getElementsByClassName("elements")
+const input = document.querySelector(".input");
+const elements = document.querySelector("ul");
+var doneBtn=document.querySelector("donebtn");
+var deleteBtn= document.querySelector("delete");
 
-function getTodos(){
-  let todoList = localStorage.getItem("todos");
-  console.log(todoList);
-  todos.innerHTML = todoList;
+var todos={
+    todo:localStorage.getItem('todos')
+};
+
+
+function loadTodos()
+{
+    console.log("Loaded");
+    elements.innerHTML=todos.todo;
 }
 
-function addTodo(event){
-  if(event.code === "Enter"){
-    let todo = document.getElementsByClassName("input").value;
-    if(todo){
-    let listItem = `<li><span><i class="fa fa-trash"></i></span>${todo}</li>`
-    console.log(listItem);
-    document.getElementsByClassName("elements").innerHTML += listItem;
-    document.getElementsByClassName("input").value = "";
-  }else{
-    alert("Eneter a valids todo");
-  }
-    localStorage.setItem('todos', todos.innerHTML);
-  }
-}
+loadTodos();
 
-document.querySelector("ul").addEventListener('click', function(event){
-  event.target.classList.toggle('completed');
-  localStorage.setItem('todos', todos.innerHTML);
+
+
+input.addEventListener('keyup',(event)=>{
+    if(event.keyCode===13)
+    {
+        console.log("Pressed");  // Enter keyCode === 13
+        if(input.value!=="")
+        {
+            let newElement =`<li><div class="delete"><i class="fa fa-trash deleteBtn"></i></div><div class="addedTodo">${input.value}</div><div class="doneBtn"><i class="fa fa-check-circle"></i></div</li>`;
+
+            elements.innerHTML+=newElement;
+
+            localStorage.setItem('todos',elements.innerHTML);
+            input.value=" ";
+        }
+        doneBtn=document.querySelector(".donebtn");
+        todos.todo=localStorage.getItem('todos');
+        loadTodos();
+    }
 });
 
-document.querySelector("ul").addEventListener('click', function(event){
-  if(event.target.tagName === "I"){ event.target.parentElement.parentElement.remove();
-  }
-  if(event.target.tagName === "SPAN"){
-    event.target.parentElement.remove();
-  }
-  localStorage.setItem('todos', todos.innerHTML);
-});
+elements.addEventListener('click',(e)=>{
+    if(e.target.tagName=="LI")
+    {
+        
+        e.target.childNodes[1].classList.toggle("done");
+        localStorage.setItem('todos',elements.innerHTML);
+    }
+    if(e.target.classList.contains("addedTodo"))
+    {
+        e.target.classList.toggle("done");
+        localStorage.setItem('todos',elements.innerHTML);
+    }
 
-document.getElementById("addNew").addEventListener("click", function(){
-  document.getElementsByClassName("input").classList.toggle("showInput");
-})
+    if(e.target.classList.contains("delete")|| e.target.classList.contains("deletebtn"))
+    {
+        e.target.parentElement.remove();
+        localStorage.setItem('todos',elements.innerHTML);
+    }
+});

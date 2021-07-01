@@ -30,25 +30,50 @@ ul{
    flex-wrap: wrap;
    background-color: coral;
 }
-span {
+li {
+  list-style: none;
     background-color: #e74c3c;
     padding: 10px;
     color: #fff;
     display: none;
     margin-right: 10px;
   }
-  li:hover span{
-    display: inline;
+  .delete {
+    display: none;
+    font-size: 1.2rem;
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding-top: 1%;
+    height: 100%;
+    width: 10%;
+    padding-top: 2.5%;
+  }
+  .delete:hover {
+    cursor: pointer;
+  }
+  .doneBtn {
+    display: inline-block;
+    font-size: 1.2rem;
+    background-color: rgb(6, 233, 6);
+    color: white;
+    text-align: center;
+    height: 100%;
+    width: 10%;
+    padding-top: 2.5%;
+    align-self: flex-start;
+    pointer-events: none;
+  }
+  .doneBtn:hover {
+    cursor: pointer;
   }
   
-  li:hover{
-    padding: 9px 0px;
+  li:hover .delete {
+    display: inline-block;
   }
-  
-  .completed {
+  .done {
     text-decoration: line-through;
   }
-  
-  .showInput {
-    display: none;
+  .deleteBtn {
+    pointer-events: none;
   }
