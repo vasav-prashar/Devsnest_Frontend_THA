@@ -24,19 +24,23 @@ h1{
     background-color: #f7f7f7;
 }
 ul{
+  width: 100%;
     padding: 10px;
     display: flex;
-   flex-direction: column;
-   flex-wrap: wrap;
-   background-color: coral;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: coral;
 }
 li {
-  list-style: none;
+    list-style: none;
     background-color: #e74c3c;
     padding: 10px;
     color: #fff;
     display: none;
     margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: larger;
   }
   .delete {
     display: none;
@@ -52,21 +56,8 @@ li {
   .delete:hover {
     cursor: pointer;
   }
-  .doneBtn {
-    display: inline-block;
-    font-size: 1.2rem;
-    background-color: rgb(6, 233, 6);
-    color: white;
-    text-align: center;
-    height: 100%;
-    width: 10%;
-    padding-top: 2.5%;
-    align-self: flex-start;
-    pointer-events: none;
-  }
-  .doneBtn:hover {
-    cursor: pointer;
-  }
+  
+  
   
   li:hover .delete {
     display: inline-block;

@@ -24,12 +24,12 @@ input.addEventListener('keyup',(event)=>{
         console.log("Pressed");  // Enter keyCode === 13
         if(input.value!=="")
         {
-            let newElement =`<li><div class="delete"><i class="fa fa-trash deleteBtn"></i></div><div class="addedTodo">${input.value}</div><div class="doneBtn"><i class="fa fa-check-circle"></i></div</li>`;
-
-            elements.innerHTML+=newElement;
+            let newElement = `<li><div class="delete"><i class="fa fa-trash deleteBtn"></i></div><div class="addedTodo">${input.value}</div></li>`;
+            console.log(input.value)
+            elements.innerHTML+= newElement;
 
             localStorage.setItem('todos',elements.innerHTML);
-            input.value=" ";
+            // input.value=" ";
         }
         doneBtn=document.querySelector(".donebtn");
         todos.todo=localStorage.getItem('todos');
