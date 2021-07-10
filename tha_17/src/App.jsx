@@ -1,4 +1,7 @@
+import CaloriePage from "./CaloriePage.jsx";
+import Header from "./header.jsx";
 const FoodCard=(props)=>{
+
   const {foodName,cal}=props;
   return(
       <div className="card">

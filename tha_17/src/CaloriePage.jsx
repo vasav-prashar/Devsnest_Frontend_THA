@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import CalorieBox from './CalorieBox';
+import CalorieBox from './CalorieBox.jsx';
 
 const calorieArr=[
     {
@@ -25,15 +25,17 @@ const calorieArr=[
 
 function CaloriePage(){
     return(
-        <div className="page">
-            <div className="container"></div>
-        </div>
-        <div className="container">
-            {calorieArr.map(element=>{
+     <div className="page">
+            
+    
+            <div className="container">
+             {calorieArr.map(element=>{
                 <CalorieBox title={element.title} calories={element.calories}/>
 
-            })}
+             })}
         </div>
+        </div>
+        
     );
 }
 export default CaloriePage;

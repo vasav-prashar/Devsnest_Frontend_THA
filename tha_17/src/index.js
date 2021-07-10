@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
-import FoodCard from './App.jsx';
 import App from './App.jsx';
 
 
