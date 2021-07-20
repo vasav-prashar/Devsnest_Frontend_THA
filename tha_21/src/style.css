@@ -1,0 +1,26 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+.main{
+  
+  border: 2px solid red;
+  display: flex;
+  height: 520px;
+  width:  400px;
+
+}
+.classContainer{
+  border: 2px solid black;
+  width: 50%;
+  height: 60%;
+  background-color: #123;
+  
+  
+}
+.editcontainer{
+  border: 2px solid black;
+  width: 50%
+
+}
